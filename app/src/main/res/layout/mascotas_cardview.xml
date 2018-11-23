@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvMascotas"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margen_cardview"
+    card_view:cardCornerRadius="@dimen/corner_radius_cardview">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--Foto de mascota-->
+        <ImageView
+            android:id="@+id/imgFotoMascota"
+            android:layout_width="@dimen/ancho_foto_mascota"
+            android:layout_height="@dimen/ancho_foto_mascota"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/pokebola"/>
+
+        <!--Datos mascota-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--Hueso blanco-->
+            <ImageView
+                android:id="@+id/imgHuesoMascota"
+                android:layout_width="@dimen/ancho_hueso"
+                android:layout_height="@dimen/ancho_hueso"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/icons8_dog_bone_100"/>
+
+            <!--Nombre de mascota-->
+            <TextView
+                android:id="@+id/tvNombreMascota"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/imgHuesoMascota"
+                android:textSize="@dimen/tamanio_letra"
+                android:text="@string/nombre_mascota"
+                android:layout_toLeftOf="@id/tvRatingMascota"/>
+
+
+            <!--Rating de mascota-->
+            <TextView
+                android:id="@+id/tvRatingMascota"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rating"
+                android:textSize="@dimen/tamanio_letra"
+                android:layout_toLeftOf="@+id/imgHuesoDoradoMascota"/>
+
+
+            <!--Hueso fondo dorado-->
+            <ImageView
+                android:id="@+id/imgHuesoDoradoMascota"
+                android:layout_width="@dimen/ancho_hueso"
+                android:layout_height="@dimen/ancho_hueso"
+                android:src="@drawable/icons8_dog_bone_100_gold"
+                android:layout_alignParentRight="true" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
